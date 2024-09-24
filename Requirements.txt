@@ -1,0 +1,49 @@
+Functionele Requirements
+Modeling van Auto's:
+Het systeem moet verschillende soorten auto's kunnen modelleren, zoals cabriolets, SUV's, sedans, raceauto's, legervoertuigen, personenauto's, etc.
+Auto's moeten verschillende motoren en brandstofsoorten ondersteunen, zoals fossiele brandstof, waterstof, elektriciteit en hybride.
+Het systeem moet optionele functies zoals veiligheidssystemen (ABS, TCS), alarmsystemen, park-assist en extra’s zoals lederen bekleding, metallic lak en spoilers ondersteunen.
+
+Ondersteuning voor autofabrieken:
+Het systeem moet de mogelijkheid bieden om fabrieken te ontwerpen die verschillende modellen en varianten van auto's kunnen produceren.
+Het systeem moet kunnen omgaan met meerdere gespecialiseerde fabrieken.
+
+Autodealers en klanten:
+Het systeem moet dealers ondersteunen die verschillende soorten auto's aanbieden en voordeelpakketten kunnen samenstellen.
+Het systeem moet klanten in staat stellen keuzes te maken tussen verschillende auto’s en extra’s.
+Klanten moeten in staat zijn om aanpassingen aan gekochte auto’s te laten doen, zoals het toevoegen van extra’s (bijv. glimmende velgen).
+
+Garage en onderhoud (optioneel):
+Een garage moet kunnen worden ontworpen die auto's repareert of onderdelen vervangt (optioneel).
+
+Design Patterns:
+Het systeem moet gebruikmaken van relevante design patterns voor uitbreidbaarheid, onderhoudbaarheid en flexibiliteit.
+Het gebruik van design patterns moet worden verantwoord in termen van hoe ze bijdragen aan de kwaliteit van het ontwerp.
+
+Uitbreidbaarheid:
+Het systeem moet uitbreidbaar zijn, zodat het bijvoorbeeld ook high-tech snufjes kan ondersteunen (optioneel).
+Niet-functionele Requirements
+
+UML Diagrammen:
+Het ontwerp moet bestaan uit één of meerdere UML-diagrammen (in pdf, jpg, of png).
+UML-diagrammen moeten correct gebruikmaken van notatiewijze en symbolen.
+
+Source Code Implementatie:
+Het ontwerp moet worden geïmplementeerd in Java.
+De implementatie moet correct, modulair en onderhoudbaar zijn.
+
+Documentatie:
+Er moet een begeleidend verslag (maximaal 3 pagina’s, in pdf-formaat) worden ingeleverd waarin het ontwerp wordt toegelicht.
+De keuzes voor het gebruik van bepaalde design patterns moeten duidelijk worden onderbouwd.
+
+Inlevering:
+Alle bestanden (UML-diagrammen, verslag en Java-sourcecode) moeten worden ingeleverd als één zip-bestand.
+De naam, achternaam en studentnummers van alle groepsleden moeten duidelijk worden vermeld.
+Beoordelingscriteria
+Elegantie van het ontwerp.
+Correct gebruik van UML-notatiewijze en symbolen.
+Correct gebruik en motivatie van design patterns.
+Uitbreidbaarheid, onderhoudbaarheid en aanpasbaarheid van het ontwerp.
+Modulaire opbouw van het ontwerp.
+Correcte implementatie van het ontwerp in Java.
+
