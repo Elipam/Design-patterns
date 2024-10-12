@@ -46,4 +46,3 @@ Correct gebruik en motivatie van design patterns.
 Uitbreidbaarheid, onderhoudbaarheid en aanpasbaarheid van het ontwerp.
 Modulaire opbouw van het ontwerp.
 Correcte implementatie van het ontwerp in Java.
-
