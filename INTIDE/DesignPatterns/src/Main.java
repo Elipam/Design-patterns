@@ -1,9 +1,51 @@
 public class Main {
 
     public static void main(String[] args) {
-
-
         System.out.println("\n\n\t\tSupScrawno?  \n\n");
+
+        GasCarFactory facGas = new GasCarFactory();
+        ElectricCarFactory facElic = new ElectricCarFactory();
+
+
+        newTests("Abstract factory");
+        Car mySedan = facGas.createSedanCar();
+        Car mySUV = facGas.createSUVCar();
+        Car mySport = facGas.createSportCar();
+
+        Car newSedan = facElic.createSedanCar();
+        Car newSUV = facElic.createSUVCar();
+        Car newSport = facElic.createSportCar();
+
+
+        exp("The sound of a gas engine sedan");
+        mySedan.vroomVroom();
+        exp("The sound of a gas engine suv");
+        mySUV.vroomVroom();
+        exp("The sound of a gas engine sport");
+        mySport.vroomVroom();
+
+        exp("The sound of an electric sedan");
+        newSedan.vroomVroom();
+        exp("The sound of an electric suv");
+        newSUV.vroomVroom();
+        exp("The sound of an electric sport");
+        newSport.vroomVroom();
+    }
+
+    static void newTests(String testID) {
+        System.out.println("\nNow testing\t:" + testID + "\n");
+
+        return;
+    }
+
+    static void exp(String expecting) {
+        System.out.println("\nExpecting\t:" + expecting);
+        return;
+    }
+
+    static void exp(String expecting, String received) {
+        System.out.println("\nExpecting\t:" + expecting + "\treceived\t:" + received);
+        return;
     }
 }
 
@@ -16,6 +58,10 @@ abstract class Car {
     }
 
     //methods
+    public void vroomVroom() {
+        System.out.println("You hear the unmistakible sound of an " + this.getClass().getSimpleName());
+    }
+
     public void addFeature() {
     }
 
@@ -62,63 +108,57 @@ class HeatedSeats {
 
 ///interfaces
 interface AbstractCarFactory {
-    public SUVCar createSUVCar();
+    public AbstractSUVCar createSUVCar();
 
 
-    public SedanCar createSedanCar();
+    public AbstractSedanCar createSedanCar();
 
 
-    public SportCar createSportCar();
+    public AbstractSportCar createSportCar();
 
 }//end of CarFactory interface
 
-interface AbstractSUVCar {
+abstract class AbstractSUVCar extends Car {
 }
 
-interface AbstractSedanCar {
+abstract class AbstractSedanCar extends Car {
 }
 
-interface AbstractSportCar {
+abstract class AbstractSportCar extends Car {
 }
 
 //classes
 ////cars
 ////    SUV
 
-class SUVCar implements AbstractSUVCar {
+
+class ElectricSUVCar extends AbstractSUVCar {
 
 }
-class ElectricSUVCar implements AbstractSUVCar {
 
-}
-
-class GasSUVCar implements AbstractSUVCar {
+class GasSUVCar extends AbstractSUVCar {
 
 }
 
 ////    Sedan
 
-class SedanCar implements AbstractSedanCar {
+
+class ElectricSedanCar extends AbstractSedanCar {
 
 }
-class ElectricSedanCar implements AbstractSedanCar {
 
-}
-
-class GasSedanCar implements AbstractSedanCar {
+class GasSedanCar extends AbstractSedanCar {
 
 }
 
 ////    Sport
 
-class SportCar implements AbstractSportCar {
+
+class ElectricSportCar extends AbstractSportCar {
 
 }
-class ElectricSportCar implements AbstractSportCar {
 
-}
-
-class GasSportCar implements AbstractSportCar {
+class GasSportCar extends AbstractSportCar {
 
 }
 
@@ -127,35 +167,35 @@ class GasSportCar implements AbstractSportCar {
 class ElectricCarFactory implements AbstractCarFactory {
 
     @Override
-    public SUVCar createSUVCar() {
-        return null;
+    public AbstractSUVCar createSUVCar() {
+        return new ElectricSUVCar();
     }
 
     @Override
-    public SedanCar createSedanCar() {
-        return null;
+    public AbstractSedanCar createSedanCar() {
+        return new ElectricSedanCar();
     }
 
     @Override
-    public SportCar createSportCar() {
-        return null;
+    public AbstractSportCar createSportCar() {
+        return new ElectricSportCar();
     }
-}
+}// end of ElectricFactory
 
 class GasCarFactory implements AbstractCarFactory {
 
     @Override
-    public SUVCar createSUVCar() {
-        return null;
+    public AbstractSUVCar createSUVCar() {
+        return new GasSUVCar();
     }
 
     @Override
-    public SedanCar createSedanCar() {
-        return null;
+    public AbstractSedanCar createSedanCar() {
+        return new GasSedanCar();
     }
 
     @Override
-    public SportCar createSportCar() {
-        return null;
+    public AbstractSportCar createSportCar() {
+        return new GasSportCar();
     }
-}
+}// end of GasFactory
