@@ -9,11 +9,9 @@ public abstract class AutoDecorator {
 
     }
 
-    abstract public void start() {
-    }
+    abstract public void start();
 
-    abstract public void stop() {
-    }
+    abstract public void stop();
 
     public int getPrijs() {
         return 0;
@@ -23,7 +21,7 @@ public abstract class AutoDecorator {
     }
 }
 
- class ParkingSensor extends AutoDecorator {
+class ParkingSensor extends AutoDecorator {
 
 
     public ParkingSensor(AbstracteAuto auto) {

@@ -1,4 +1,4 @@
-abstract class AbstracteAuto {
+ class AbstracteAuto {
     protected Motor moter;
     protected RemSysteem remSystem;
 
@@ -28,7 +28,7 @@ abstract class AbstracteAuto {
 class SportAuto extends AbstracteAuto {
 }
 
-class PersonenAuto extends AbstracteAuto {
+class PersonenAuto extends AbstracteAuto{
 }
 
 class BestelBus extends AbstracteAuto {
