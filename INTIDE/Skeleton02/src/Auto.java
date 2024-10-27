@@ -1,4 +1,4 @@
- class AbstracteAuto {
+public abstract class Auto {
     protected Motor moter;
     protected RemSysteem remSystem;
 
@@ -8,7 +8,7 @@
     private float price;    //float, some cars might cost more then int can express.
 
     //methods
-    public AbstracteAuto() {
+    public Auto() {
     }
 
     public void start() {
@@ -25,11 +25,11 @@
     }
 }
 
-class SportAuto extends AbstracteAuto {
+class SportAuto extends Auto {
 }
 
-class PersonenAuto extends AbstracteAuto{
+class PersonenAuto extends Auto {
 }
 
-class BestelBus extends AbstracteAuto {
+class BestelBus extends Auto {
 }

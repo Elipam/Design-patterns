@@ -7,8 +7,11 @@ Decided to make Auto abstract.
 
 Decided to make abstract constructors in the abstract parent classes. You wouldn't make a theoretical car. You'd theoretically make a car.
 
+Decided to make Auto no longer abstract, doesn't need to be and made 1 other thing difficult.
+
 ## decorator
 I think that AutoDecorater being child of Auto is a mistake. Especially if Auto auto is a protected variable.
+Only made 1 of the presets,
 
 ## bridgePattern
-Standernd name convention, Auto is abstract, just the idea of a car. No need to prefix Motor with abstract. Also the uml shows they don't have a constructor
+Auto not AbstracteAuto

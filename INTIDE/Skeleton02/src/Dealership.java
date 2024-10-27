@@ -8,11 +8,15 @@ public class Dealership {
 
     //fields
 
-   public Dealership(){}
-    public void getPresets(){}
-    AbstracteAuto verkrijgAuto(int preset){
-       AbstracteAuto result = new AbstracteAuto();
-       return result;
+    public Dealership() {
+    }
+
+    public void getPresets() {
+    }
+
+    Auto verkrijgAuto(int preset) {
+        Auto result = null;
+        return result;
     }
 
 }

@@ -1,7 +1,7 @@
 public abstract class AutoDecorator {
-    protected AbstracteAuto auto;
+    protected Auto auto;
 
-    public AutoDecorator(AbstracteAuto auto) {
+    public AutoDecorator(Auto auto) {
 
     }
 
@@ -24,7 +24,35 @@ public abstract class AutoDecorator {
 class ParkingSensor extends AutoDecorator {
 
 
-    public ParkingSensor(AbstracteAuto auto) {
+    public ParkingSensor(Auto auto) {
+    }
+
+    public void start() {
+    }
+
+    public void stop() {
+    }
+
+}
+
+class BosseSound extends AutoDecorator {
+
+
+    public BosseSound(Auto auto) {
+    }
+
+    public void start() {
+    }
+
+    public void stop() {
+    }
+
+}
+
+class HeatedSeats extends AutoDecorator {
+
+
+    public HeatedSeats(Auto auto) {
     }
 
     public void start() {
