@@ -1,7 +1,11 @@
-public class AutoDecorator {
+public abstract class AutoDecorator {
     protected AbstracteAuto auto;
 
     public AutoDecorator(AbstracteAuto auto) {
+
+    }
+
+    public AutoDecorator() {
 
     }
 
@@ -19,7 +23,7 @@ public class AutoDecorator {
     }
 }
 
-public class ParkingSensor extends AutoDecorator {
+ class ParkingSensor extends AutoDecorator {
 
 
     public ParkingSensor(AbstracteAuto auto) {
