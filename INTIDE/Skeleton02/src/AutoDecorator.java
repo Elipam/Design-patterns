@@ -11,6 +11,7 @@ public class AutoDecorator {
     }
 
     public int getPrijs() {
+        return 0;
     }
 
     public void printinfo() {
