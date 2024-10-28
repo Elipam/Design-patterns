@@ -1,15 +1,18 @@
 abstract class Motor {
-    abstract public void startMotor();
+    /*TODO er voor zorgen dat alle motor subtypes dit ook doen
+    misschien wat extra info fields toevoegen?
+     */
+    public void startMotor(Tank t){
+            System.out.println("motor gebruikt " + t.getEnergieType() + " uit " + t.getTankType());
+    };
 
     abstract public void stopMotor();
 
     abstract public void getMotorInfo();
 }
 
-abstract class BenzineMotor extends Motor {
-    public void startMotor() {
-    }
-
+class BenzineMotor extends Motor {
+//ik heb ze even aangepast zodat ik ze kan gebruiken
     public void stopMotor() {
     }
 
@@ -28,9 +31,7 @@ abstract class DieselMotor extends Motor {
     }
 }
 
-abstract class ElectroMotor extends Motor {
-    public void startMotor() {
-    }
+class ElectroMotor extends Motor {
 
     public void stopMotor() {
     }

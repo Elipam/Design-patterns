@@ -2,6 +2,8 @@ public abstract class Auto {
     protected Motor moter;
     protected RemSysteem remSystem;
 
+    protected Tank tank;
+
     private String kleur;
     private int bouwjaar;
     private float gewicht;  //kg     //float, that precision could be important. And some cars might be heavier then an int can express.
@@ -12,6 +14,7 @@ public abstract class Auto {
     }
 
     public void start() {
+        moter.startMotor(tank);
     }
 
     public void stop() {
