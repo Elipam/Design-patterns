@@ -3,8 +3,9 @@ abstract class Motor {
     misschien wat extra info fields toevoegen?
      */
     protected String type;
-    public void startMotor(Tank t){
-            System.out.println(type +" verbruikt " + t.getEnergieType() + " uit " + t.getTankType());
+
+    public void startMotor(Tank t) {
+        System.out.println(type + " verbruikt " + t.getEnergieType() + " uit " + t.getTankType());
     }
 
     abstract public void stopMotor();
@@ -13,8 +14,8 @@ abstract class Motor {
 }
 
 class BenzineMotor extends Motor {
-//ik heb ze even aangepast zodat ik ze kan gebruiken
-    public BenzineMotor(){
+    //ik heb ze even aangepast zodat ik ze kan gebruiken
+    public BenzineMotor() {
         type = "BenzineMotor";
     }
 
@@ -26,7 +27,7 @@ class BenzineMotor extends Motor {
 }
 
 class DieselMotor extends Motor {
-    public DieselMotor(){
+    public DieselMotor() {
         type = "DieselMotor";
     }
 
@@ -38,8 +39,8 @@ class DieselMotor extends Motor {
 }
 
 class ElectroMotor extends Motor {
-    public ElectroMotor(){
-        type="Elektromotor";
+    public ElectroMotor() {
+        type = "Elektromotor";
     }
 
     public void stopMotor() {
@@ -51,6 +52,8 @@ class ElectroMotor extends Motor {
 
 
 abstract class RemSysteem {
+    public String naam;
+
     abstract public void rem();
 
     abstract public void getRemInfo();
@@ -58,6 +61,10 @@ abstract class RemSysteem {
 }
 
 class TrommelRemmen extends RemSysteem {
+    String naam = "TrommelRemmen";
+
+    TrommelRemmen(){}
+
     public void rem() {
     }
 
@@ -67,6 +74,8 @@ class TrommelRemmen extends RemSysteem {
 }
 
 class SchijfABSRemmen extends RemSysteem {
+    String naam = "SchijfABSRemmen";
+
     public void rem() {
     }
 
@@ -76,6 +85,8 @@ class SchijfABSRemmen extends RemSysteem {
 }
 
 class CarbonComposietRemmen extends RemSysteem {
+    String naam = "CarbonComposietRemmen";
+
     public void rem() {
     }
 

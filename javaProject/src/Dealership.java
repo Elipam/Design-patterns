@@ -1,9 +1,9 @@
 import java.util.HashMap;
 
 public class Dealership {
-    private SportAutoFabriek sportAutoFabriek;
-    private PersonenAutoFabriek personenAutoFabriek;
-    private BestelBusAutoFabriek bestelBusAutoFabriek;
+    protected SportAutoFabriek sportAutoFabriek;
+    protected PersonenAutoFabriek personenAutoFabriek;
+    protected BestelBusAutoFabriek bestelBusAutoFabriek;
     private HashMap<Integer, String> presets = new HashMap<>();
 
     //fields
@@ -34,7 +34,7 @@ public class Dealership {
         }//fills preset hashmap
 
     }
-    
+
     public Dealership(SportAutoFabriek sportAutoFabriek, PersonenAutoFabriek personenAutoFabriek,BestelBusAutoFabriek bestelBusAutoFabriek) {
 
         int inputInt;
@@ -79,7 +79,7 @@ public class Dealership {
 
         switch (fabriek) {
             case 0:
-                choiceFabriek = sportAutoFabriek;
+                choiceFabriek = new SportAutoFabriek();
                 break;
             case 1:
                 choiceFabriek = personenAutoFabriek;

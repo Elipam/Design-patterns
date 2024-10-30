@@ -8,6 +8,7 @@ public class App {
         Test.testExample(shout);
         Test.selectieTest();
         Test.testDealershipPresets(shout);
+        Test.testDealershipOrdering(shout);
     }
 }
 
@@ -96,12 +97,12 @@ class Test { //
         return errors;
     }//end of test
 
-    public static void selectieTest(){
+    public static void selectieTest() {
         System.out.println("\n----------------------------------------");
         System.out.println("begin selectietest");
         System.out.println("----------------------------------------\n");
         AutoFabriek fabriek = new AandrijfTest();
-        for(int i = 0;i < 3;++i){
+        for (int i = 0; i < 3; ++i) {
             fabriek.MaakAuto().start();
         }
         System.out.println("\n----------------------------------------");
@@ -118,9 +119,36 @@ class Test { //
 
 //testing zone
         //setup unit test, classes, instances, etc
-Dealership dealership = new Dealership();
+        Dealership dealership = new Dealership();
         //test condition of this unit
-dealership.getPresets();
+        dealership.getPresets();
+        //next unit
+
+//shout the amount of errors
+        if (shout) exp("errors", errors);
+
+//end of testing zone
+        return errors;
+    }//end of test
+
+    static int testDealershipOrdering(boolean shout) { // returns amount of errors
+        int errors = 0;
+
+        //Testing the presets hashmap.
+        // testing the testing functions, and making an example template.
+        if (shout) newTests("DealerShip presets hashmap");
+
+//testing zone
+        //setup unit test, classes, instances, etc
+        SportAutoFabriek sportAutoFabriek = new SportAutoFabriek();
+        PersonenAutoFabriek personenAutoFabriek = new PersonenAutoFabriek();
+        BestelBusAutoFabriek bestelBusAutoFabriek = new BestelBusAutoFabriek();
+
+        Dealership dealership = new Dealership(sportAutoFabriek, personenAutoFabriek, bestelBusAutoFabriek);
+        //test condition of this unit
+        Auto auto0 = dealership.verkrijgAuto(0, 0, 0, ""); //sport benzine auto met trommol remmen, zonder kleur.
+
+        auto0.printInfo();
         //next unit
 
 //shout the amount of errors

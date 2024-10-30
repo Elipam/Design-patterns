@@ -35,6 +35,7 @@ public abstract class Auto {
     }
 
     public void printInfo() {
+        System.out.println(kleur + tank.TankType + tank.getEnergieType() + remSystem.naam);
     }
 }
 
