@@ -14,6 +14,7 @@ public class App {
         Auto auto = new SportAuto();
         auto = new BosseSound(auto);
         auto = new HeatedSeats(auto);
+        auto = new HeatedSeats(auto);
 
         // Test functionality
         auto.start();
