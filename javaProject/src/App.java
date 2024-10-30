@@ -12,7 +12,7 @@ public class App {
 
         // Test decorator pattern
         Auto auto = new SportAuto();
-        auto = new BosseSound(auto);
+        auto = new BoseSound(auto);
         auto = new HeatedSeats(auto);
         auto = new HeatedSeats(auto);
 
