@@ -4,11 +4,22 @@ public class App {
     static boolean shout = true; //if true tests will print their output.
 
     public static void main(String[] args) {
-        System.out.println("hiiii");
-        Test.testExample(shout);
-        Test.selectieTest();
-        Test.testDealershipPresets(shout);
-        Test.testDealershipOrdering(shout);
+        // System.out.println("hiiii");
+        // Test.testExample(shout);
+        // Test.selectieTest();
+        // Test.testDealershipPresets(shout);
+        // Test.testDealershipOrdering(shout);
+
+        // Test decorator pattern
+        Auto auto = new SportAuto();
+        auto = new BosseSound(auto);
+        auto = new HeatedSeats(auto);
+
+        // Test functionality
+        auto.start();
+        auto.printInfo();
+        System.out.println("Total price: " + auto.getPrijs()); // Should be 52250 (50000 + 1500 + 750)
+        auto.stop();
     }
 }
 

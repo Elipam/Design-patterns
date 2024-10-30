@@ -26,6 +26,9 @@ public abstract class AutoDecorator extends Auto {
     }
 }
 class ParkingSensor extends AutoDecorator {
+    private static final float ADDON_PRICE = 500.00f;
+
+
     public ParkingSensor(Auto auto) {
         super(auto);  // Roep constructor van parent
     }
@@ -44,17 +47,19 @@ class ParkingSensor extends AutoDecorator {
 
     @Override
     public float getPrijs() {
-        return super.getPrijs() + 500;
+        return super.getPrijs() + ADDON_PRICE;
     }
 
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("+ Parking sensors (€500)");
+        System.out.println("- Parking sensors (" + ADDON_PRICE + ")");
     }
 }
 
 class BosseSound extends AutoDecorator {
+    private static final float ADDON_PRICE = 1500.00f;
+
     public BosseSound(Auto auto) {
         super(auto);
     }
@@ -73,17 +78,19 @@ class BosseSound extends AutoDecorator {
 
     @Override
     public float getPrijs() {
-        return super.getPrijs() + 1500;
+        return super.getPrijs() + ADDON_PRICE;
     }
 
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("+ Bosse Sound System (€1500)");
+        System.out.println("- Bosse Sound System (" + ADDON_PRICE + ")");
     }
 }
 
 class HeatedSeats extends AutoDecorator {
+
+    private static final float ADDON_PRICE = 750.00f;
 
     public HeatedSeats(Auto auto) {
         super(auto);  // Call parent constructor
@@ -103,12 +110,12 @@ class HeatedSeats extends AutoDecorator {
 
     @Override
     public float getPrijs() {
-        return super.getPrijs() + 750;
+        return super.getPrijs() + ADDON_PRICE;
     }
 
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("+ Heated Seats (€750)");
+        System.out.println("- Heated Seats (" + ADDON_PRICE + ")");
     }
 }

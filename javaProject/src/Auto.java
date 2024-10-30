@@ -42,7 +42,7 @@ public abstract class Auto {
 }
 
 class SportAuto extends Auto {
-    private static final float BASE_PRICE = 50000.0f;
+    private static final float BASE_PRICE = 50000.00f;
     
     public SportAuto() {
         super(/*new Motor(), new RemSysteem(), new Tank(),*/ 
@@ -56,12 +56,12 @@ class SportAuto extends Auto {
 
     @Override
     public void printInfo() {
-        System.out.println("SportAuto: €" + getPrijs());
+        System.out.println("SportAuto: " + getPrijs());
     }
 }
 
 class PersonenAuto extends Auto {
-    private static final float BASE_PRICE = 20000.0f;
+    private static final float BASE_PRICE = 20000.00f;
     
     public PersonenAuto() {
         super(/*new Motor(), new RemSysteem(), new Tank(),*/ 
@@ -75,12 +75,12 @@ class PersonenAuto extends Auto {
 
     @Override
     public void printInfo() {
-        System.out.println("PersonenAuto: €" + getPrijs());
+        System.out.println("PersonenAuto: " + getPrijs());
     }
 }
 
 class BestelBus extends Auto {
-    private static final float BASE_PRICE = 35000.0f;
+    private static final float BASE_PRICE = 35000.00f;
     
     public BestelBus() {
         super(/*new Motor(), new RemSysteem(), new Tank(),*/ 
@@ -94,7 +94,7 @@ class BestelBus extends Auto {
 
     @Override
     public void printInfo() {
-        System.out.println("BestelBus: €" + getPrijs());
+        System.out.println("BestelBus: " + getPrijs());
     }
 }
 
