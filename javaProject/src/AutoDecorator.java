@@ -44,7 +44,7 @@ class ParkingSensor extends AutoDecorator {
 
     @Override
     public void start() {
-        super.start();  // Roep methode van parent
+        super.start(); 
         System.out.println("Parking sensors activated");
     }
 
@@ -102,12 +102,12 @@ class HeatedSeats extends AutoDecorator {
     private static final float ADDON_PRICE = 750.00f;
 
     public HeatedSeats(Auto auto) {
-        super(auto);  // Call parent constructor
+        super(auto);
     }
 
     @Override
     public void start() {
-        super.start();  // Call parent method
+        super.start();
         System.out.println("Heated seats warming up");
     }
 
