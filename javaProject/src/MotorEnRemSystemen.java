@@ -4,7 +4,7 @@ abstract class Motor {
      */
     protected String type;
     public void startMotor(Tank t){
-            System.out.println(type +" gebruikt " + t.getEnergieType() + " uit " + t.getTankType());
+            System.out.println(type +" verbruikt " + t.getEnergieType() + " uit " + t.getTankType());
     }
 
     abstract public void stopMotor();
