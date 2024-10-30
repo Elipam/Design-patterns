@@ -57,7 +57,7 @@ abstract class RemSysteem {
 
 }
 
-abstract class TrommelRemmen extends RemSysteem {
+class TrommelRemmen extends RemSysteem {
     public void rem() {
     }
 
@@ -66,7 +66,7 @@ abstract class TrommelRemmen extends RemSysteem {
 
 }
 
-abstract class SchijfABSRemmen extends RemSysteem {
+class SchijfABSRemmen extends RemSysteem {
     public void rem() {
     }
 
@@ -75,7 +75,7 @@ abstract class SchijfABSRemmen extends RemSysteem {
 
 }
 
-abstract class CarbonComposietRemmen extends RemSysteem {
+class CarbonComposietRemmen extends RemSysteem {
     public void rem() {
     }
 

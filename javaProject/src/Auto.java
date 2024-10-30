@@ -4,7 +4,7 @@ public abstract class Auto {
 
     protected Tank tank;
 
-    private String kleur;
+    protected String kleur;
     private int bouwjaar;
     private float gewicht;  //kg     //float, that precision could be important. And some cars might be heavier then an int can express.
     private float price;    //float, some cars might cost more then int can express.
