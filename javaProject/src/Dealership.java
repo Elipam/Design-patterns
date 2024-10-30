@@ -9,9 +9,64 @@ public class Dealership {
     //fields
 
     public Dealership() {
+
+        int inputInt;
+        String inputString;
+
+        String a[] = {"Sport", "Personen", "BestelBus"};
+        String b[] = {"Benzine", "Diesel", "Elektro"};
+        String c[] = {"TrommelRemmen", "SchijfABSRemmen", "CarbonComposietRemmen"};
+
+
+        for (int i = 0; i < 3; i++) {
+
+            for (int j = 0; j < 3; j++) {
+
+                for (int k = 0; k < 3; k++) {
+
+                    inputInt = i * 100 + j * 10 + k;
+                    inputString = a[i] + " " + b[j] + " auto met " + c[k];
+
+                    presets.put(inputInt, inputString);
+
+                }
+            }
+        }//fills preset hashmap
+
+    }
+    
+    public Dealership(SportAutoFabriek sportAutoFabriek, PersonenAutoFabriek personenAutoFabriek,BestelBusAutoFabriek bestelBusAutoFabriek) {
+
+        int inputInt;
+        String inputString;
+
+        String a[] = {"Sport", "Personen", "BestelBus"};
+        String b[] = {"Benzine", "Diesel", "Elektro"};
+        String c[] = {"TrommelRemmen", "SchijfABSRemmen", "CarbonComposietRemmen"};
+
+
+        for (int i = 0; i < 3; i++) {
+
+            for (int j = 0; j < 3; j++) {
+
+                for (int k = 0; k < 3; k++) {
+
+                    inputInt = i * 100 + j * 10 + k;
+                    inputString = a[i] + " " + b[j] + " auto met " + c[k];
+
+                    presets.put(inputInt, inputString);
+
+                }
+            }
+        }//fills preset hashmap
+
     }
 
+
     public void getPresets() {
+        for (int key : presets.keySet()) {
+            System.out.println("key: " + key + " value: " + presets.get(key) );
+        }
     }
 
 
@@ -19,7 +74,7 @@ public class Dealership {
         Auto result = null;
 
         AutoFabriek choiceFabriek = null; // 3 options
-        AandrijvingSelectie choiceEnergy = null; //2 options
+        AandrijvingSelectie choiceEnergy = null; //3 options
         RemSysteem choiceBrakes = null; //3 options
 
         switch (fabriek) {

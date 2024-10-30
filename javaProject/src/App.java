@@ -7,6 +7,7 @@ public class App {
         System.out.println("hiiii");
         Test.testExample(shout);
         Test.selectieTest();
+        Test.testDealershipPresets(shout);
     }
 }
 
@@ -107,5 +108,26 @@ class Test { //
         System.out.println("einde selectietest");
         System.out.println("----------------------------------------\n");
     }
+
+    static int testDealershipPresets(boolean shout) { // returns amount of errors
+        int errors = 0;
+
+        //Testing the presets hashmap.
+        // testing the testing functions, and making an example template.
+        if (shout) newTests("DealerShip presets hashmap");
+
+//testing zone
+        //setup unit test, classes, instances, etc
+Dealership dealership = new Dealership();
+        //test condition of this unit
+dealership.getPresets();
+        //next unit
+
+//shout the amount of errors
+        if (shout) exp("errors", errors);
+
+//end of testing zone
+        return errors;
+    }//end of test
 
 }
