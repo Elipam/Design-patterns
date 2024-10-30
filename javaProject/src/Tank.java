@@ -27,3 +27,11 @@ class Accu extends Tank{
         TankType = "Accu";
     }
 }
+
+class DieselTank extends Tank{
+    public DieselTank(){
+        energieType = "Diesel";
+        TankType = "DieselTank";
+    }
+
+}

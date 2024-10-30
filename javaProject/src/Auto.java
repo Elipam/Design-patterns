@@ -13,6 +13,16 @@ public abstract class Auto {
     public Auto() {
     }
 
+    public Auto(Motor moter, RemSysteem remSystem, Tank tank, String kleur, int bouwjaar, float gewicht, float price) {
+        this.moter = moter;
+        this.remSystem = remSystem;
+        this.tank = tank;
+        this.kleur = kleur;
+        this.bouwjaar = bouwjaar;
+        this.gewicht = gewicht;
+        this.price = price;
+    }
+
     public void start() {
         moter.startMotor(tank);
     }
@@ -35,4 +45,10 @@ class PersonenAuto extends Auto {
 }
 
 class BestelBus extends Auto {
+}
+
+class Aandrijver extends Auto {
+    public Aandrijver(Motor moter, Tank tank) {
+        super(moter, null, tank, "", 0, 0, 0);
+    }
 }

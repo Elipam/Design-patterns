@@ -6,6 +6,7 @@ public class App {
     public static void main(String[] args) {
         System.out.println("hiiii");
         Test.testExample(shout);
+        Test.selectieTest();
     }
 }
 
@@ -93,5 +94,18 @@ class Test { //
 //end of testing zone
         return errors;
     }//end of test
+
+    public static void selectieTest(){
+        System.out.println("\n----------------------------------------");
+        System.out.println("begin selectietest");
+        System.out.println("----------------------------------------\n");
+        AutoFabriek fabriek = new AandrijfTest();
+        for(int i = 0;i < 3;++i){
+            fabriek.MaakAuto().start();
+        }
+        System.out.println("\n----------------------------------------");
+        System.out.println("einde selectietest");
+        System.out.println("----------------------------------------\n");
+    }
 
 }

@@ -28,3 +28,16 @@ class BenzineSelectie extends AandrijvingSelectie {
         return new BenzineTank();
     }
 }
+
+class DieselSelectie extends AandrijvingSelectie {
+
+    @Override
+    public Motor leverMotor() {
+        return new DieselMotor();
+    }
+
+    @Override
+    public Tank leverTank() {
+        return new DieselTank();
+    }
+}

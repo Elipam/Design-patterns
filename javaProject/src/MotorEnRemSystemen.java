@@ -2,9 +2,10 @@ abstract class Motor {
     /*TODO er voor zorgen dat alle motor subtypes dit ook doen
     misschien wat extra info fields toevoegen?
      */
+    protected String type;
     public void startMotor(Tank t){
-            System.out.println("motor gebruikt " + t.getEnergieType() + " uit " + t.getTankType());
-    };
+            System.out.println(type +" gebruikt " + t.getEnergieType() + " uit " + t.getTankType());
+    }
 
     abstract public void stopMotor();
 
@@ -13,6 +14,10 @@ abstract class Motor {
 
 class BenzineMotor extends Motor {
 //ik heb ze even aangepast zodat ik ze kan gebruiken
+    public BenzineMotor(){
+        type = "BenzineMotor";
+    }
+
     public void stopMotor() {
     }
 
@@ -20,8 +25,9 @@ class BenzineMotor extends Motor {
     }
 }
 
-abstract class DieselMotor extends Motor {
-    public void startMotor() {
+class DieselMotor extends Motor {
+    public DieselMotor(){
+        type = "DieselMotor";
     }
 
     public void stopMotor() {
@@ -32,6 +38,9 @@ abstract class DieselMotor extends Motor {
 }
 
 class ElectroMotor extends Motor {
+    public ElectroMotor(){
+        type="Elektromotor";
+    }
 
     public void stopMotor() {
     }
