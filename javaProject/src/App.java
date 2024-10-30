@@ -101,9 +101,9 @@ class Test { //
         System.out.println("\n----------------------------------------");
         System.out.println("begin selectietest");
         System.out.println("----------------------------------------\n");
-        AutoFabriek fabriek = new AandrijfTest();
+        // AutoFabriek fabriek = new AandrijfTest();
         for (int i = 0; i < 3; ++i) {
-            fabriek.MaakAuto().start();
+            // fabriek.MaakAuto().start();
         }
         System.out.println("\n----------------------------------------");
         System.out.println("einde selectietest");

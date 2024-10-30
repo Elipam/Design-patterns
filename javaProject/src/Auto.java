@@ -1,8 +1,7 @@
 public abstract class Auto {
-    // Commented out for now
-    /*protected Motor moter;
+    protected Motor moter;
     protected RemSysteem remSystem;
-    protected Tank tank;*/
+    protected Tank tank;
 
     protected String kleur;
     private int bouwjaar;
