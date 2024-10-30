@@ -66,23 +66,23 @@ class ParkingSensor extends AutoDecorator {
     }
 }
 
-class BosseSound extends AutoDecorator {
+class BoseSound extends AutoDecorator {
     private static final float ADDON_PRICE = 1500.00f;
 
-    public BosseSound(Auto auto) {
+    public BoseSound(Auto auto) {
         super(auto);
     }
 
     @Override
     public void start() {
         super.start();
-        System.out.println("Bosse sound system online");
+        System.out.println("Bose sound system online");
     }
 
     @Override
     public void stop() {
         super.stop();
-        System.out.println("Bosse sound system offline");
+        System.out.println("Bose sound system offline");
     }
 
     @Override
@@ -93,7 +93,7 @@ class BosseSound extends AutoDecorator {
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("- Bosse Sound System (" + ADDON_PRICE + ")");
+        System.out.println("- Bose Sound System (" + ADDON_PRICE + ")");
     }
 }
 
