@@ -23,6 +23,16 @@ public abstract class Auto {
         this.price = price;
     }
 
+    //factory constructor
+
+
+    public Auto(Motor moter, RemSysteem remSystem, String kleur, int bouwjaar) {
+        this.moter = moter;
+        this.remSystem = remSystem;
+        this.kleur = kleur;
+        this.bouwjaar = bouwjaar;
+    }
+
     public void start() {
         // Simplified for now
         System.out.println("Auto starting");
@@ -49,6 +59,10 @@ class SportAuto extends Auto {
               "Rood", 2024, 1200.0f, BASE_PRICE);
     }
 
+    public SportAuto(Motor motor, RemSysteem remsysteem, String kleur, int bouwjaar) {
+        super(motor,remsysteem,kleur,bouwjaar);
+    }
+
     @Override
     public float getPrijs() {
         return BASE_PRICE;
@@ -66,6 +80,9 @@ class PersonenAuto extends Auto {
     public PersonenAuto() {
         super(/*new Motor(), new RemSysteem(), new Tank(),*/ 
               "Zwart", 2024, 1500.0f, BASE_PRICE);
+    }
+    public PersonenAuto(Motor motor, RemSysteem remsysteem, String kleur, int bouwjaar) {
+        super(motor,remsysteem,kleur,bouwjaar);
     }
 
     @Override
@@ -87,6 +104,9 @@ class BestelBus extends Auto {
               "Wit", 2024, 2500.0f, BASE_PRICE);
     }
 
+    public BestelBus(Motor motor, RemSysteem remsysteem, String kleur, int bouwjaar) {
+        super(motor,remsysteem,kleur,bouwjaar);
+    }
     @Override
     public float getPrijs() {
         return BASE_PRICE;
