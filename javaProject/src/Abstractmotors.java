@@ -26,7 +26,7 @@ class BenzineMotor extends Abstractmotors {
 
     @Override
     public String getMotorInfo() {
-        return "Benzine Motor";
+        return "benzine motor";
     }
 }
 class DieselMotor extends Abstractmotors {
@@ -42,7 +42,7 @@ class DieselMotor extends Abstractmotors {
 
     @Override
     public String getMotorInfo() {
-        return "Benzine Motor";
+        return "diesel motor";
     }
 }
 class Elektromotor extends Abstractmotors {
@@ -58,6 +58,6 @@ class Elektromotor extends Abstractmotors {
 
     @Override
     public String getMotorInfo() {
-        return "Benzine Motor";
+        return "elektro motor";
     }
 }
