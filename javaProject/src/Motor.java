@@ -1,51 +1,72 @@
 public abstract class Motor {
-    /*TODO er voor zorgen dat alle motor subtypes dit ook doen
-    misschien wat extra info fields toevoegen?
-     */
     protected String type;
+    //constructor
 
-    public void startMotor(Tank t) {
-        System.out.println(type + " verbruikt " + t.getEnergieType() + " uit " + t.getTankType());
-    }
 
-    abstract public void stopMotor();
+    // Method to start the motor
+    public abstract void startMotor();
 
-    abstract public void getMotorInfo();
+    // Method to stop the motor
+    public abstract void stopMotor();
+
+    // Method to get motor information
+    public abstract String getMotorInfo();
 }
 
 class BenzineMotor extends Motor {
-    //ik heb ze even aangepast zodat ik ze kan gebruiken
     public BenzineMotor() {
         type = "BenzineMotor";
     }
-
-    public void stopMotor() {
+    @Override
+    public void startMotor() {
+        System.out.println("Starting benzine motor.");
     }
 
-    public void getMotorInfo() {
+    @Override
+    public void stopMotor() {
+        System.out.println("Stopping benzine motor.");
+    }
+
+    @Override
+    public String getMotorInfo() {
+        return "benzine motor";
     }
 }
-
 class DieselMotor extends Motor {
     public DieselMotor() {
         type = "DieselMotor";
     }
-
-    public void stopMotor() {
+    @Override
+    public void startMotor() {
+        System.out.println("Starting diesel motor.");
     }
 
-    public void getMotorInfo() {
+    @Override
+    public void stopMotor() {
+        System.out.println("Stopping diesel motor.");
+    }
+
+    @Override
+    public String getMotorInfo() {
+        return "diesel motor";
     }
 }
-
-class ElectroMotor extends Motor {
-    public ElectroMotor() {
+class ElektroMotor extends Motor {
+    public ElektroMotor() {
         type = "Elektromotor";
     }
-
-    public void stopMotor() {
+    @Override
+    public void startMotor() {
+        System.out.println("Starting elektro motor.");
     }
 
-    public void getMotorInfo() {
+    @Override
+    public void stopMotor() {
+        System.out.println("Stopping elektro motor.");
+    }
+
+    @Override
+    public String getMotorInfo() {
+        return "elektro motor";
     }
 }

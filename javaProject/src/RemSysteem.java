@@ -1,44 +1,49 @@
 public abstract class RemSysteem {
-    public String naam;
 
-    abstract public void rem();
+    // Method to apply brakes
+    public abstract void rem();
 
-    abstract public void getRemInfo();
-
+    // Method to get brake system information
+    public abstract String getRemInfo();
 }
 
 class TrommelRemmen extends RemSysteem {
-    String naam = "TrommelRemmen";
-
     TrommelRemmen() {
     }
 
+    @Override
     public void rem() {
+        System.out.println("Applying trommel brakes.");
     }
 
-    public void getRemInfo() {
+    @Override
+    public String getRemInfo() {
+        return "Trommel Brakes";
     }
-
 }
 
 class SchijfABSRemmen extends RemSysteem {
-    String naam = "SchijfABSRemmen";
-
+    SchijfABSRemmen(){}
+    @Override
     public void rem() {
+        System.out.println("Applying disc brakes.");
     }
 
-    public void getRemInfo() {
+    @Override
+    public String getRemInfo() {
+        return "Disc Brakes";
     }
-
 }
 
 class CarbonComposietRemmen extends RemSysteem {
-    String naam = "CarbonComposietRemmen";
-
+    CarbonComposietRemmen(){}
+    @Override
     public void rem() {
+        System.out.println("Applying carbon composite brakes.");
     }
 
-    public void getRemInfo() {
+    @Override
+    public String getRemInfo() {
+        return "Carbon Composite Brakes";
     }
-
 }

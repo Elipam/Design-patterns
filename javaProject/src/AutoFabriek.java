@@ -15,7 +15,7 @@ class SportAutoFabriek extends AutoFabriek {
     }
     @Override
    public Auto MaakAuto(){
-    return null;
+    return new SportAuto();
   }
 }
 
@@ -26,7 +26,7 @@ class PersonenAutoFabriek extends AutoFabriek {
     }
     @Override
    public Auto MaakAuto(){
-    return null;
+    return new PersonenAuto();
   }
 }
 
@@ -37,6 +37,6 @@ class BestelBusAutoFabriek extends AutoFabriek {
     }
     @Override
    public Auto MaakAuto(){
-    return null;
+    return new BestelBus();
   }
 }

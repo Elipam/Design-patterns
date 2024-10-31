@@ -108,7 +108,7 @@ public class Dealership {
                 break;
 
             case 2:
-                choiceMotor = new ElectroMotor();
+                choiceMotor = new ElektroMotor();
                 choiceTank = new Accu();
                 break;
 
