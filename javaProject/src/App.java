@@ -154,7 +154,7 @@ class Test { //
 
         Dealership dealership = new Dealership(sportAutoFabriek, personenAutoFabriek, bestelBusAutoFabriek);
         //test condition of this unit
-        Auto auto0 = dealership.verkrijgAuto(0, 0, 0, ""); //sport benzine auto met trommol remmen, zonder kleur.
+        Auto auto0 = dealership.verkrijgAuto(0, ""); //sport benzine auto met trommol remmen, zonder kleur.
         Auto auto1 = dealership.verkrijgAuto(1, 2, 1, "Geel");
         Auto auto2 = dealership.verkrijgAuto(212, "Blauw met gele vlammen");
 

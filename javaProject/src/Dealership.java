@@ -146,6 +146,7 @@ public class Dealership {
         RemSysteem choiceBrakes = null; //3 options
 
         switch ((choice/1)%10) {
+            case 10:
             case 0:
                 result = sportAutoFabriek.MaakAuto();
                 break;
