@@ -50,8 +50,8 @@ public abstract class Auto {
         /*System.out.println(kleur + tank.TankType + tank.getEnergieType() + remSystem.naam);*/
     }
     public void printSufferTank() {
-        System.out.println("kleur:" + kleur + "-motor:" + moter.type + "-tank:" + tank.TankType + "-remSystem:" + remSystem.getRemInfo());
-        System.out.println(kleur + tank.TankType + tank.getEnergieType() + remSystem.getRemInfo());
+        System.out.println(this.getClass() +"kleur:" + kleur + "-motor:" + moter.type + "-tank:" + tank.TankType + "-remSystem:" + remSystem.getRemInfo());
+
     }
 
     public void printSuffer() {

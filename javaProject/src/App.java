@@ -40,6 +40,10 @@ class Test { //
         System.out.println("\tRecieved\t:" + expecting);
         return;
     }
+    static void res() {
+        System.out.print("\tRecieved\t:");
+        return;
+    }
 
     static void exp(String expecting, String received) {
         System.out.println("Expecting\t:" + expecting + "\t\t\treceived\t:" + received);
@@ -152,15 +156,18 @@ class Test { //
         //test condition of this unit
         Auto auto0 = dealership.verkrijgAuto(0, 0, 0, ""); //sport benzine auto met trommol remmen, zonder kleur.
         Auto auto1 = dealership.verkrijgAuto(1, 2, 1, "Geel");
-        Auto auto2 = dealership.verkrijgAuto(2, 1, 2, "Blauw met gele vlammen"); //sport benzine auto met trommol remmen, zonder kleur.
+        Auto auto2 = dealership.verkrijgAuto(212, "Blauw met gele vlammen");
 
-        exp("sport benzine auto met trommol remmen, zonder kleur.");
+        exp("000\tsport benzine auto met trommol remmen, zonder kleur.");
+        res();
         auto0.printSufferTank();
 
-        exp("Personen Elektro auto met schijfABS remmen, Geel.");
+        exp("121:\tPersonen Elektro auto met schijfABS remmen, Geel.");
+        res();
         auto1.printSufferTank();
 
-        exp("Bestelbus Diesel auto met Carbpon composietremmen, met gele vlammen over blauw.");
+        exp("212:\tBestelbus Diesel auto met Carbpon composietremmen, met gele vlammen over blauw.");
+        res();
         auto2.printSufferTank();
         //next unit
 

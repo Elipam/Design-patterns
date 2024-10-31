@@ -137,4 +137,65 @@ public class Dealership {
         return result;
     }
 
+    Auto verkrijgAuto(int choice, String choiceColor) {
+        Auto result = null;
+
+        AutoFabriek choiceFabriek = null; // 3 options
+        Tank choiceTank = null;
+        Motor choiceMotor = null;
+        RemSysteem choiceBrakes = null; //3 options
+
+        switch ((choice/1)%10) {
+            case 0:
+                result = sportAutoFabriek.MaakAuto();
+                break;
+            case 1:
+                result = personenAutoFabriek.MaakAuto();
+                break;
+            case 2:
+                result = bestelBusAutoFabriek.MaakAuto();
+                break;
+        }
+
+        switch ((choice/10)%10) {
+            case 0:
+                choiceMotor = new BenzineMotor();
+                choiceTank = new BenzineTank();
+                break;
+
+            case 1:
+                choiceMotor = new DieselMotor();
+                choiceTank = new BenzineTank();
+                break;
+
+            case 2:
+                choiceMotor = new ElektroMotor();
+                choiceTank = new Accu();
+                break;
+
+        }
+
+        switch ((choice/100)%10) {
+            case 0:
+                choiceBrakes = new TrommelRemmen();
+                break;
+
+            case 1:
+                choiceBrakes = new SchijfABSRemmen();
+                break;
+
+            case 2:
+                choiceBrakes = new CarbonComposietRemmen();
+                break;
+
+        }
+
+        result.moter = choiceMotor;
+        result.tank = choiceTank;
+        result.remSystem = choiceBrakes;
+        result.kleur = choiceColor;
+
+        return result;
+    }
+
 }
