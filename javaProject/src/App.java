@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class App {
     static boolean shout = true; //if true tests will print their output.
 
@@ -11,7 +9,7 @@ public class App {
         Test.testDealershipPresets(shout);
         Test.testDealershipOrdering(shout);
         Test.eliamTest();
-        Test.factorytest();
+
     }
 }
 
@@ -157,13 +155,13 @@ class Test { //
         Auto auto2 = dealership.verkrijgAuto(2, 1, 2, "Blauw met gele vlammen"); //sport benzine auto met trommol remmen, zonder kleur.
 
         exp("sport benzine auto met trommol remmen, zonder kleur.");
-        auto0.printSuffer();
+        auto0.printSufferTank();
 
         exp("Personen Elektro auto met schijfABS remmen, Geel.");
-        auto1.printSuffer();
+        auto1.printSufferTank();
 
         exp("Bestelbus Diesel auto met Carbpon composietremmen, met gele vlammen over blauw.");
-        auto2.printSuffer();
+        auto2.printSufferTank();
         //next unit
 
 //shout the amount of errors
@@ -193,16 +191,16 @@ class Test { //
         AutoFabriek af = new SportAutoFabriek();
         Auto a = af.MaakAuto(new BenzineMotor(), new TrommelRemmen(), 2024, "groen");
         System.out.println("SportAuto:");
-        a.printInfo();
+        a.printSuffer();
 
         af = new PersonenAutoFabriek();
         a = af.MaakAuto(new BenzineMotor(), new TrommelRemmen(), 2024, "groen");
         System.out.println("PersonenAuto:");
-        a.printInfo();
+        a.printSuffer();
 
         af = new BestelBusAutoFabriek();
         a = af.MaakAuto(new BenzineMotor(), new TrommelRemmen(), 2024, "groen");
         System.out.println("BestelBus:");
-        a.printInfo();
+        a.printSuffer();
     }
 }
