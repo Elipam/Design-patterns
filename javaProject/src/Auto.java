@@ -39,6 +39,11 @@ public abstract class Auto {
         System.out.println(kleur + " auto");
         /*System.out.println(kleur + tank.TankType + tank.getEnergieType() + remSystem.naam);*/
     }
+    public void printSuffer() {
+        System.out.println("kleur:" + kleur + "-motor:" + moter + "-tank:" + tank + "-remSystem:" + remSystem);
+        /*System.out.println(kleur + tank.TankType + tank.getEnergieType() + remSystem.naam);*/
+    }
+
 }
 
 class SportAuto extends Auto {

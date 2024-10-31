@@ -1,6 +1,7 @@
 import java.util.HashMap;
 
 public class Dealership {
+    /*TODO Currently VerkrijgAuto generates a car with null instances for its parts. */
     protected SportAutoFabriek sportAutoFabriek;
     protected PersonenAutoFabriek personenAutoFabriek;
     protected BestelBusAutoFabriek bestelBusAutoFabriek;
@@ -35,7 +36,11 @@ public class Dealership {
 
     }
 
-    public Dealership(SportAutoFabriek sportAutoFabriek, PersonenAutoFabriek personenAutoFabriek,BestelBusAutoFabriek bestelBusAutoFabriek) {
+    public Dealership(SportAutoFabriek sportAutoFabriek, PersonenAutoFabriek personenAutoFabriek, BestelBusAutoFabriek bestelBusAutoFabriek) {
+
+        this.sportAutoFabriek = sportAutoFabriek;
+        this.personenAutoFabriek = personenAutoFabriek;
+        this.bestelBusAutoFabriek = bestelBusAutoFabriek;
 
         int inputInt;
         String inputString;
@@ -60,47 +65,53 @@ public class Dealership {
             }
         }//fills preset hashmap
 
+
     }
 
 
     public void getPresets() {
         for (int key : presets.keySet()) {
-            System.out.println("key: " + key + " value: " + presets.get(key) );
+            System.out.println("key: " + key + " value: " + presets.get(key));
         }
     }
 
 
-    Auto verkrijgAuto(int fabriek, int aandrijving, int remSysteem, String choiceColor) {
+    Auto verkrijgAuto(int fabriek, int motor, int remSysteem, String choiceColor) {
         Auto result = null;
 
         AutoFabriek choiceFabriek = null; // 3 options
-        AandrijvingSelectie choiceEnergy = null; //3 options
+        Tank choiceTank = null;
+        Motor choiceMotor = null;
         RemSysteem choiceBrakes = null; //3 options
 
         switch (fabriek) {
             case 0:
-                choiceFabriek = new SportAutoFabriek();
+                result = sportAutoFabriek.MaakAuto();
                 break;
             case 1:
-                choiceFabriek = personenAutoFabriek;
+                result = personenAutoFabriek.MaakAuto();
                 break;
             case 2:
-                choiceFabriek = bestelBusAutoFabriek;
+                result = bestelBusAutoFabriek.MaakAuto();
                 break;
         }
 
-        switch (aandrijving) {
+        switch (motor) {
             case 0:
-                choiceEnergy = new BenzineSelectie();
+                choiceMotor = new BenzineMotor();
+                choiceTank = new BenzineTank();
                 break;
 
             case 1:
-                choiceEnergy = new DieselSelectie();
+                choiceMotor = new DieselMotor();
+                choiceTank = new BenzineTank();
                 break;
 
             case 2:
-                choiceEnergy = new ElektrischeSelectie();
+                choiceMotor = new ElectroMotor();
+                choiceTank = new Accu();
                 break;
+
         }
 
         switch (remSysteem) {
@@ -118,9 +129,8 @@ public class Dealership {
 
         }
 
-        result = choiceFabriek.MaakAuto();
-        result.moter = choiceEnergy.leverMotor();
-        result.tank = choiceEnergy.leverTank();
+        result.moter = choiceMotor;
+        result.tank = choiceTank;
         result.remSystem = choiceBrakes;
         result.kleur = choiceColor;
 

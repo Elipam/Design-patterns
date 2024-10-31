@@ -4,23 +4,13 @@ public class App {
     static boolean shout = true; //if true tests will print their output.
 
     public static void main(String[] args) {
-        // System.out.println("hiiii");
-        // Test.testExample(shout);
-        // Test.selectieTest();
-        // Test.testDealershipPresets(shout);
-        // Test.testDealershipOrdering(shout);
+         System.out.println("hiiii");
+         Test.testExample(shout);
+         Test.selectieTest();
+         Test.testDealershipPresets(shout);
+         Test.testDealershipOrdering(shout);
 
-        // Test decorator pattern
-        Auto auto = new SportAuto();
-        auto = new BoseSound(auto);
-        auto = new HeatedSeats(auto);
-        auto = new HeatedSeats(auto);
 
-        // Test functionality
-        auto.start();
-        auto.printInfo();
-        System.out.println("Total price: " + auto.getPrijs()); // Should be 52250 (50000 + 1500 + 750)
-        auto.stop();
     }
 }
 
@@ -148,19 +138,22 @@ class Test { //
 
         //Testing the presets hashmap.
         // testing the testing functions, and making an example template.
-        if (shout) newTests("DealerShip presets hashmap");
+        if (shout) newTests("DealerShip ordering");
 
 //testing zone
         //setup unit test, classes, instances, etc
-        SportAutoFabriek sportAutoFabriek = new SportAutoFabriek();
-        PersonenAutoFabriek personenAutoFabriek = new PersonenAutoFabriek();
-        BestelBusAutoFabriek bestelBusAutoFabriek = new BestelBusAutoFabriek();
+        SportAutoFabriek sportAutoFabriek;
+        sportAutoFabriek = new SportAutoFabriek();
+        PersonenAutoFabriek personenAutoFabriek;
+        personenAutoFabriek = new PersonenAutoFabriek();
+        BestelBusAutoFabriek bestelBusAutoFabriek;
+        bestelBusAutoFabriek = new BestelBusAutoFabriek();
 
         Dealership dealership = new Dealership(sportAutoFabriek, personenAutoFabriek, bestelBusAutoFabriek);
         //test condition of this unit
         Auto auto0 = dealership.verkrijgAuto(0, 0, 0, ""); //sport benzine auto met trommol remmen, zonder kleur.
 
-        auto0.printInfo();
+        auto0.printSuffer();
         //next unit
 
 //shout the amount of errors
@@ -169,5 +162,20 @@ class Test { //
 //end of testing zone
         return errors;
     }//end of test
+
+    static void eliamTest(){
+        // Test decorator pattern
+        Auto auto = new SportAuto();
+        auto = new BoseSound(auto);
+        auto = new HeatedSeats(auto);
+        auto = new HeatedSeats(auto);
+
+        // Test functionality
+        auto.start();
+        auto.printInfo();
+        System.out.println("Total price: " + auto.getPrijs()); // Should be 52250 (50000 + 1500 + 750)
+        auto.stop();
+
+    }
 
 }
