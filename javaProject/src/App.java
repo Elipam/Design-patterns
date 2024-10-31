@@ -6,10 +6,6 @@ public class App {
     public static void main(String[] args) {
          System.out.println("hiiii");
          Test.factorytest();
-         Test.testExample(shout);
-         Test.selectieTest();
-         Test.testDealershipPresets(shout);
-         Test.testDealershipOrdering(shout);
 
     }
 }
