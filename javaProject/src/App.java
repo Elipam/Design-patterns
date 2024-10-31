@@ -5,11 +5,11 @@ public class App {
 
     public static void main(String[] args) {
          System.out.println("hiiii");
+         Test.factorytest();
          Test.testExample(shout);
          Test.selectieTest();
          Test.testDealershipPresets(shout);
          Test.testDealershipOrdering(shout);
-
 
     }
 }
@@ -178,4 +178,21 @@ class Test { //
 
     }
 
+  static void factorytest(){
+    System.out.println("\n\nStart factory test");
+    AutoFabriek af = new SportAutoFabriek();
+    Auto a = af.MaakAuto(new BenzineMotor(),new TrommelRemmen(),2024,"groen");
+    System.out.println("SportAuto:");
+    a.printInfo();
+    
+    af = new PersonenAutoFabriek();
+    a = af.MaakAuto(new BenzineMotor(),new TrommelRemmen(),2024,"groen");
+    System.out.println("PersonenAuto:");
+    a.printInfo();
+    
+    af = new BestelBusAutoFabriek();
+    a = af.MaakAuto(new BenzineMotor(),new TrommelRemmen(),2024,"groen");
+    System.out.println("BestelBus:");
+    a.printInfo();
+  }
 }

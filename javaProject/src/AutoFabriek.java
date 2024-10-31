@@ -4,6 +4,7 @@ abstract public class AutoFabriek {
 
 
    public abstract Auto MaakAuto(Motor motor, RemSysteem remsysteem, int bouwjaar, String kleur);
+   public abstract Auto MaakAuto();
 
 }
 
@@ -12,6 +13,10 @@ class SportAutoFabriek extends AutoFabriek {
     public Auto MaakAuto(Motor motor, RemSysteem remsysteem, int bouwjaar, String kleur){
         return new SportAuto(motor,remsysteem,kleur,bouwjaar);
     }
+    @Override
+   public Auto MaakAuto(){
+    return null;
+  }
 }
 
 class PersonenAutoFabriek extends AutoFabriek {
@@ -19,6 +24,10 @@ class PersonenAutoFabriek extends AutoFabriek {
     public Auto MaakAuto(Motor motor, RemSysteem remsysteem, int bouwjaar, String kleur){
         return new PersonenAuto(motor,remsysteem,kleur,bouwjaar);
     }
+    @Override
+   public Auto MaakAuto(){
+    return null;
+  }
 }
 
 class BestelBusAutoFabriek extends AutoFabriek {
@@ -26,4 +35,8 @@ class BestelBusAutoFabriek extends AutoFabriek {
     public Auto MaakAuto(Motor motor, RemSysteem remsysteem, int bouwjaar, String kleur){
         return new BestelBus(motor,remsysteem,kleur,bouwjaar);
     }
+    @Override
+   public Auto MaakAuto(){
+    return null;
+  }
 }
