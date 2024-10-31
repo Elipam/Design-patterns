@@ -4,13 +4,14 @@ public class App {
     static boolean shout = true; //if true tests will print their output.
 
     public static void main(String[] args) {
-         System.out.println("hiiii");
-         Test.factorytest();
-         Test.testExample(shout);
-         Test.selectieTest();
-         Test.testDealershipPresets(shout);
-         Test.testDealershipOrdering(shout);
-
+        System.out.println("hiiii");
+        Test.factorytest();
+        Test.testExample(shout);
+        //    Test.selectieTest();
+        Test.testDealershipPresets(shout);
+        Test.testDealershipOrdering(shout);
+        Test.eliamTest();
+        Test.factorytest();
     }
 }
 
@@ -28,7 +29,7 @@ class Test { //
     }
 
     static void exp(int expecting) {
-        System.out.println("Expecting\t:" + expecting);
+        System.out.println("\nExpecting\t:" + expecting);
         return;
     }
 
@@ -99,7 +100,7 @@ class Test { //
         return errors;
     }//end of test
 
-    public static void selectieTest() {
+    public static void selectieTest() {//depricated
         System.out.println("\n----------------------------------------");
         System.out.println("begin selectietest");
         System.out.println("----------------------------------------\n");
@@ -152,8 +153,17 @@ class Test { //
         Dealership dealership = new Dealership(sportAutoFabriek, personenAutoFabriek, bestelBusAutoFabriek);
         //test condition of this unit
         Auto auto0 = dealership.verkrijgAuto(0, 0, 0, ""); //sport benzine auto met trommol remmen, zonder kleur.
+        Auto auto1 = dealership.verkrijgAuto(1, 2, 1, "Geel");
+        Auto auto2 = dealership.verkrijgAuto(2, 1, 2, "Blauw met gele vlammen"); //sport benzine auto met trommol remmen, zonder kleur.
 
+        exp("sport benzine auto met trommol remmen, zonder kleur.");
         auto0.printSuffer();
+
+        exp("Personen Elektro auto met schijfABS remmen, Geel.");
+        auto1.printSuffer();
+
+        exp("Bestelbus Diesel auto met Carbpon composietremmen, met gele vlammen over blauw.");
+        auto2.printSuffer();
         //next unit
 
 //shout the amount of errors
@@ -163,7 +173,7 @@ class Test { //
         return errors;
     }//end of test
 
-    static void eliamTest(){
+    static void eliamTest() {
         // Test decorator pattern
         Auto auto = new SportAuto();
         auto = new BoseSound(auto);
@@ -178,21 +188,21 @@ class Test { //
 
     }
 
-  static void factorytest(){
-    System.out.println("\n\nStart factory test");
-    AutoFabriek af = new SportAutoFabriek();
-    Auto a = af.MaakAuto(new BenzineMotor(),new TrommelRemmen(),2024,"groen");
-    System.out.println("SportAuto:");
-    a.printInfo();
-    
-    af = new PersonenAutoFabriek();
-    a = af.MaakAuto(new BenzineMotor(),new TrommelRemmen(),2024,"groen");
-    System.out.println("PersonenAuto:");
-    a.printInfo();
-    
-    af = new BestelBusAutoFabriek();
-    a = af.MaakAuto(new BenzineMotor(),new TrommelRemmen(),2024,"groen");
-    System.out.println("BestelBus:");
-    a.printInfo();
-  }
+    static void factorytest() {
+        System.out.println("\n\nStart factory test");
+        AutoFabriek af = new SportAutoFabriek();
+        Auto a = af.MaakAuto(new BenzineMotor(), new TrommelRemmen(), 2024, "groen");
+        System.out.println("SportAuto:");
+        a.printInfo();
+
+        af = new PersonenAutoFabriek();
+        a = af.MaakAuto(new BenzineMotor(), new TrommelRemmen(), 2024, "groen");
+        System.out.println("PersonenAuto:");
+        a.printInfo();
+
+        af = new BestelBusAutoFabriek();
+        a = af.MaakAuto(new BenzineMotor(), new TrommelRemmen(), 2024, "groen");
+        System.out.println("BestelBus:");
+        a.printInfo();
+    }
 }
