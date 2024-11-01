@@ -1,3 +1,10 @@
+import Decorators.*;
+import Dealership.*;
+import Autofabrieken.*;
+import Autos.*;
+import Motor.*;
+import Remsysteem.*;
+
 public class App {
     static boolean shout = true; //if true tests will print their output.
 
@@ -5,7 +12,7 @@ public class App {
         System.out.println("hiiii");
         Test.factorytest();
         Test.testExample(shout);
-        //    Test.selectieTest();
+        Test.selectieTest();
         Test.testDealershipPresets(shout);
         Test.testDealershipOrdering(shout);
         Test.eliamTest();
