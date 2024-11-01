@@ -80,7 +80,6 @@ public class Dealership {
         Auto result = null;
 
         AutoFabriek choiceFabriek = null; // 3 options
-        Tank choiceTank = null;
         Motor choiceMotor = null;
         RemSysteem choiceBrakes = null; //3 options
 
@@ -99,17 +98,14 @@ public class Dealership {
         switch (motor) {
             case 0:
                 choiceMotor = new BenzineMotor();
-                choiceTank = new BenzineTank();
                 break;
 
             case 1:
                 choiceMotor = new DieselMotor();
-                choiceTank = new BenzineTank();
                 break;
 
             case 2:
                 choiceMotor = new ElektroMotor();
-                choiceTank = new Accu();
                 break;
 
         }
@@ -124,14 +120,13 @@ public class Dealership {
                 break;
 
             case 2:
-                choiceBrakes = new CarbonComposietRemmen();
+                choiceBrakes = new CarbonCompositeRemmen();
                 break;
 
         }
 
-        result.moter = choiceMotor;
-        result.tank = choiceTank;
-        result.remSystem = choiceBrakes;
+        result.motor = choiceMotor;
+        result.RemSysteem = choiceBrakes;
         result.kleur = choiceColor;
 
         return result;
@@ -141,7 +136,6 @@ public class Dealership {
         Auto result = null;
 
         AutoFabriek choiceFabriek = null; // 3 options
-        Tank choiceTank = null;
         Motor choiceMotor = null;
         RemSysteem choiceBrakes = null; //3 options
 
@@ -161,17 +155,14 @@ public class Dealership {
         switch ((choice/10)%10) {
             case 0:
                 choiceMotor = new BenzineMotor();
-                choiceTank = new BenzineTank();
                 break;
 
             case 1:
                 choiceMotor = new DieselMotor();
-                choiceTank = new BenzineTank();
                 break;
 
             case 2:
                 choiceMotor = new ElektroMotor();
-                choiceTank = new Accu();
                 break;
 
         }
@@ -186,14 +177,13 @@ public class Dealership {
                 break;
 
             case 2:
-                choiceBrakes = new CarbonComposietRemmen();
+                choiceBrakes = new CarbonCompositeRemmen();
                 break;
 
         }
 
-        result.moter = choiceMotor;
-        result.tank = choiceTank;
-        result.remSystem = choiceBrakes;
+        result.motor = choiceMotor;
+        result.RemSysteem = choiceBrakes;
         result.kleur = choiceColor;
 
         return result;

@@ -158,17 +158,17 @@ class Test { //
         Auto auto1 = dealership.verkrijgAuto(1, 2, 1, "Geel");
         Auto auto2 = dealership.verkrijgAuto(212, "Blauw met gele vlammen");
 
-        exp("000\tsport benzine auto met trommol remmen, zonder kleur.");
-        res();
-        auto0.printSufferTank();
+//        exp("000\tsport benzine auto met trommol remmen, zonder kleur.");
+//        res();
+//      auto0.printSufferTank();
 
-        exp("121:\tPersonen Elektro auto met schijfABS remmen, Geel.");
-        res();
-        auto1.printSufferTank();
+//        exp("121:\tPersonen Elektro auto met schijfABS remmen, Geel.");
+//        res();
+//        auto1.printSufferTank();
 
-        exp("212:\tBestelbus Diesel auto met Carbpon composietremmen, met gele vlammen over blauw.");
-        res();
-        auto2.printSufferTank();
+//        exp("212:\tBestelbus Diesel auto met Carbpon composietremmen, met gele vlammen over blauw.");
+//        res();
+//        auto2.printSufferTank();
         //next unit
 
 //shout the amount of errors
