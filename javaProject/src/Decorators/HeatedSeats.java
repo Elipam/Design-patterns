@@ -4,7 +4,7 @@ import Autos.Auto;
 
 public class HeatedSeats extends AutoDecorator {
 
-    private static final float ADDON_PRICE = 750.00f;
+    private static float ADDON_PRICE = 750.00f;
 
     public HeatedSeats(Auto auto) {
         super(auto);

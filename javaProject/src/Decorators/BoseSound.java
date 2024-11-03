@@ -3,7 +3,7 @@ package Decorators;
 import Autos.Auto;
 
 public class BoseSound extends AutoDecorator {
-    private static final float ADDON_PRICE = 1500.00f;
+    private static float ADDON_PRICE = 1500.00f;
 
     public BoseSound(Auto auto) {
         super(auto);

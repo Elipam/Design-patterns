@@ -3,7 +3,7 @@ package Decorators;
 import Autos.Auto;
 
 public class ParkingSensor extends AutoDecorator {
-    private static final float ADDON_PRICE = 500.00f;
+    private static float ADDON_PRICE = 500.00f;
 
     // Constructor
     public ParkingSensor(Auto auto) {

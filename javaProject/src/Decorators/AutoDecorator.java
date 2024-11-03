@@ -9,6 +9,7 @@ import Autos.Auto;
 
 public abstract class AutoDecorator extends Auto {
     protected Auto auto;
+    private static float ADDON_PRICE;
 
     // Constructor
     public AutoDecorator(Auto auto) {
@@ -30,7 +31,7 @@ public abstract class AutoDecorator extends Auto {
     // Get the price of the car
     @Override
     public float getPrijs() {
-        return auto.getPrijs();
+        return auto.getPrijs() + ADDON_PRICE;
     }
 
     // Print the information of the car
@@ -38,4 +39,5 @@ public abstract class AutoDecorator extends Auto {
     public void printInfo() {
         auto.printInfo();
     }
+
 }
