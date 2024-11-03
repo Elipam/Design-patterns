@@ -8,11 +8,23 @@ public class PersonenAuto extends Auto {
     
     public PersonenAuto() {
         super(new DieselMotor(), new TrommelRemmen(), 
-              "Zwart", 2024, 1500.0f, BASE_PRICE);
+              "Zwart", 2024, BASE_PRICE);
     }
 
     public PersonenAuto(Motor motor, RemSysteem remsysteem, String kleur, int bouwjaar) {
         super(motor, remsysteem, kleur, bouwjaar);
+    }
+
+    @Override
+    public void start() {
+        System.out.println("Personenauto starten");
+        super.start();
+    }
+    
+    @Override
+    public void stop() {
+        super.stop();
+        System.out.println("Personenauto gestopt");
     }
 
     @Override
@@ -22,6 +34,7 @@ public class PersonenAuto extends Auto {
 
     @Override
     public void printInfo() {
-        System.out.println("PersonenAuto: " + getPrijs());
+        System.out.println("Dit is een Personenauto");
+        super.printInfo();
     }
 }

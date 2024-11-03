@@ -6,17 +6,21 @@ import Remsysteem.RemSysteem;
 public abstract class Auto {
     public Motor motor;
     public RemSysteem RemSysteem;
-    
     public String kleur;
     private int bouwjaar;
     private float price;
 
     public Auto() {
+        this.motor = null;
+        this.RemSysteem = null;
+        this.kleur = null;
+        this.bouwjaar = 0;
+        this.price = 0;
     }
 
     // Simplified constructor
     public Auto(Motor motor, RemSysteem RemSysteem, 
-                String kleur, int bouwjaar, float gewicht, float price) {
+                String kleur, int bouwjaar, float price) {
         this.motor = motor;
         this.RemSysteem = RemSysteem;
         this.kleur = kleur;
@@ -33,20 +37,22 @@ public abstract class Auto {
     }
 
     public void start() {
-        System.out.println("Auto starting");
+        this.motor.startMotor();
     }
 
     public void stop() {
-        System.out.println("Auto stopping");
+        this.motor.stopMotor();
     }
 
-    public abstract float getPrijs();
+    public void rem() {
+        this.RemSysteem.rem();
+    }
+
+    public float getPrijs() {
+        return price;
+    }
 
     public void printInfo() {
-        System.out.println(kleur + " auto");
-    }
-
-    public void printSuffer() {
-        System.out.println(this.getClass() + "kleur:" + kleur + "-motor: " + motor.getMotorInfo() + "-RemSysteem:" + RemSysteem.getRemInfo());
+        System.out.println("kleur: " + kleur + "\nmotor: " + motor.getMotorInfo() + "\nRemSysteem: " + RemSysteem.getRemInfo() + "\nbouwjaar: " + bouwjaar);
     }
 }

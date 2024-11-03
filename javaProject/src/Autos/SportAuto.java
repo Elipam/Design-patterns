@@ -8,11 +8,23 @@ public class SportAuto extends Auto {
     
     public SportAuto() {
         super(new BenzineMotor(), new SchijfABSRemmen(), 
-              "Rood", 2024, 1200.0f, BASE_PRICE);
+              "Rood", 2024, BASE_PRICE);
     }
 
     public SportAuto(Motor motor, RemSysteem remsysteem, String kleur, int bouwjaar) {
         super(motor, remsysteem, kleur, bouwjaar);
+    }
+
+    @Override
+    public void start() {
+        System.out.println("Sportauto starten");
+        super.start();
+    }
+    
+    @Override
+    public void stop() {
+        super.stop();
+        System.out.println("Sportauto gestopt");
     }
 
     @Override
@@ -22,6 +34,7 @@ public class SportAuto extends Auto {
 
     @Override
     public void printInfo() {
-        System.out.println("SportAuto: " + getPrijs());
+        System.out.println("Dit is een Sportauto");
+        super.printInfo();
     }
 }

@@ -8,13 +8,25 @@ public class BestelBus extends Auto {
     
     public BestelBus() {
         super(new ElektroMotor(), new CarbonCompositeRemmen(), 
-              "Wit", 2024, 2500.0f, BASE_PRICE);
+              "Wit", 2024, BASE_PRICE);
     }
 
     public BestelBus(Motor motor, RemSysteem remsysteem, String kleur, int bouwjaar) {
         super(motor, remsysteem, kleur, bouwjaar);
     }
+
+    @Override
+    public void start() {
+        System.out.println("BestelBus starten");
+        super.start();
+    }
     
+    @Override
+    public void stop() {
+        super.stop();
+        System.out.println("BestelBus gestopt");
+    }
+
     @Override
     public float getPrijs() {
         return BASE_PRICE;
@@ -22,6 +34,7 @@ public class BestelBus extends Auto {
 
     @Override
     public void printInfo() {
-        System.out.println("BestelBus: " + getPrijs());
+        System.out.println("Dit is een bestelbus");
+        super.printInfo();
     }
 }
