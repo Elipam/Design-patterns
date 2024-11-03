@@ -83,7 +83,7 @@ public class Dealership {
     }
 
 
-    Auto verkrijgAuto(int fabriek, int motor, int remSysteem, String choiceColor) {
+    public Auto verkrijgAuto(int fabriek, int motor, int remSysteem, String choiceColor) {
         Auto result = null;
 
         AutoFabriek choiceFabriek = null; // 3 options
