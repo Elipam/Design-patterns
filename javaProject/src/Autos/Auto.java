@@ -9,7 +9,6 @@ public abstract class Auto {
     
     public String kleur;
     private int bouwjaar;
-    private float gewicht;
     private float price;
 
     public Auto() {
@@ -22,7 +21,6 @@ public abstract class Auto {
         this.RemSysteem = RemSysteem;
         this.kleur = kleur;
         this.bouwjaar = bouwjaar;
-        this.gewicht = gewicht;
         this.price = price;
     }
 
