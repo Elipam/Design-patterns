@@ -30,6 +30,6 @@ public class ParkingSensor extends AutoDecorator {
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("- Parking sensors (" + ADDON_PRICE + ")");
+        System.out.println("Addon: Parking sensors ($" + ADDON_PRICE + ")");
     }
 }

@@ -30,6 +30,6 @@ public class HeatedSeats extends AutoDecorator {
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("- Heated Seats (" + ADDON_PRICE + ")");
+        System.out.println("Addon: Heated Seats ($" + ADDON_PRICE + ")");
     }
 }

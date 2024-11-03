@@ -19,7 +19,13 @@ public class App {
         dealership.getStock();
         Auto verkregenauto = dealership.verkrijgAuto(4);
 
+        verkregenauto = new BoseSound(verkregenauto);
+        verkregenauto = new HeatedSeats(verkregenauto);
+
+        verkregenauto.start();
+        verkregenauto.stop();
         verkregenauto.printInfo();
+        System.out.println(verkregenauto.getPrijs());
 
     }
 }

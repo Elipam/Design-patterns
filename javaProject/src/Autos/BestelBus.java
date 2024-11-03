@@ -23,8 +23,8 @@ public class BestelBus extends Auto {
     
     @Override
     public void stop() {
+        System.out.println("BestelBus stoppen");
         super.stop();
-        System.out.println("BestelBus gestopt");
     }
 
     @Override

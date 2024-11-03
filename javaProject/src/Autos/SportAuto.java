@@ -23,8 +23,8 @@ public class SportAuto extends Auto {
     
     @Override
     public void stop() {
+        System.out.println("Sportauto stoppen");
         super.stop();
-        System.out.println("Sportauto gestopt");
     }
 
     @Override

@@ -29,6 +29,6 @@ public class BoseSound extends AutoDecorator {
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("- Bose Sound System (" + ADDON_PRICE + ")");
+        System.out.println("Addon: Bose Sound System ($" + ADDON_PRICE + ")");
     }
 }

@@ -23,8 +23,8 @@ public class PersonenAuto extends Auto {
     
     @Override
     public void stop() {
+        System.out.println("Personenauto stoppen");
         super.stop();
-        System.out.println("Personenauto gestopt");
     }
 
     @Override
